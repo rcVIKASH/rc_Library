@@ -20,7 +20,7 @@ const SeatDetail = ({ seat, onUnbook }) => {
   const handleUnbook = async (userId) => {
     try {
       await axios.post(
-        `http://localhost:8080/api/v1/unbook/${seat.seatNumber}/${bookingInfo.slot}/${userId}`
+        `https://rc-library.onrender.com/api/v1/unbook/${seat.seatNumber}/${bookingInfo.slot}/${userId}`
       );
       toast.success("Seat unbooked successfully! ✅");
       onUnbook(); // Refresh seats list
@@ -33,7 +33,7 @@ const SeatDetail = ({ seat, onUnbook }) => {
   const FeePaid = async (userId) => {
     try {
       await axios.post(
-        `http://localhost:8080/api/v1/updateLastFeePaidAt/${userId}`
+        `https://rc-library.onrender.com/api/v1/updateLastFeePaidAt/${userId}`
       );
       toast.success("Fee Paid successfully! ✅");
       onUnbook();

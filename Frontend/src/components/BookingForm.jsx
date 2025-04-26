@@ -19,7 +19,7 @@ const BookingForm = ({ onSuccess }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:8080/api/v1/bookSeat", formData);
+      await axios.post("https://rc-library.onrender.com/api/v1/bookSeat", formData);
       toast.success("Seat Booked successfully! ✅");
       onSuccess();
       setFormData({

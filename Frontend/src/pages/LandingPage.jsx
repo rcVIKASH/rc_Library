@@ -11,7 +11,7 @@ const LandingPage = () => {
 
   const fetchSeats = async () => {
     try {
-      const res = await axios.get("http://localhost:8080/api/v1/seats");
+      const res = await axios.get("https://rc-library.onrender.com/api/v1/seats");
       const seatData = res.data?.data || [];
       setSeats(seatData);
 
